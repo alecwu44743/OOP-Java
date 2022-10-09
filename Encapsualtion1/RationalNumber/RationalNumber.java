@@ -171,8 +171,8 @@ public class RationalNumber{
         RationalNumber temp6 = new RationalNumber("0/1");
         RationalNumber temp7 = new RationalNumber("0/1");
         RationalNumber temp8 = new RationalNumber("0/1");
-        RationalNumber temp9 = new RationalNumber("0/1");
-        RationalNumber temp10 = new RationalNumber("0/1");
+        // RationalNumber temp9 = new RationalNumber("0/1");
+        // RationalNumber temp10 = new RationalNumber("0/1");
 
         // a*|d-b|-(b+c/a)*|b*e-c/d| = -553/4
         temp1 = a.multiply(d.subtract(b).Absolute()); // a*|d-b|
