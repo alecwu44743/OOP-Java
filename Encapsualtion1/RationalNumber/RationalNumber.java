@@ -170,7 +170,7 @@ public class RationalNumber{
         RationalNumber temp5 = new RationalNumber("0/1");
         RationalNumber temp6 = new RationalNumber("0/1");
         RationalNumber temp7 = new RationalNumber("0/1");
-        RationalNumber temp8 = new RationalNumber("0/1");
+        // RationalNumber temp8 = new RationalNumber("0/1");
         // RationalNumber temp9 = new RationalNumber("0/1");
         // RationalNumber temp10 = new RationalNumber("0/1");
 
