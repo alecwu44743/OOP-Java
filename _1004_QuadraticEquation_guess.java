@@ -31,10 +31,10 @@ public class _1004_QuadraticEquation_guess{
         else if (delta == 0){
             double ans = (-b) / (2 * a);
             if(x1 == ans && x2 == ans){
-                System.out.printf("%.4f and %.4f are the roots of equation %.4fx^2 + %.4fx + %.4f = 0", x1, x2, a, b, c);
+                System.out.printf("%.4f and %.4f are the roots of equation %.4fx^2 + %.4fx + %.4f = 0\n", x1, x2, a, b, c);
             }
             else{
-                System.out.printf("%.4f and %.4f are not the roots of equation %.4fx^2 + %.4fx + %.4f = 0", x1, x2, a, b, c);
+                System.out.printf("%.4f and %.4f are not the roots of equation %.4fx^2 + %.4fx + %.4f = 0\n", x1, x2, a, b, c);
                 System.out.println("The equation has one real root.");
                 System.out.println("The equation has one root: " + ans);
             }
@@ -43,10 +43,10 @@ public class _1004_QuadraticEquation_guess{
             double ans1 = (-b + Math.sqrt(delta)) / (2 * a);
             double ans2 = (-b - Math.sqrt(delta)) / (2 * a);
             if((x1 == ans1 && x2 == ans2) || (x1 == ans2 && x2 == ans1)){
-                System.out.printf("%.4f and %.4f are the roots of equation %.4fx^2 + %.4fx + %.4f = 0", x1, x2, a, b, c);
+                System.out.printf("%.4f and %.4f are the roots of equation %.4fx^2 + %.4fx + %.4f = 0\n", x1, x2, a, b, c);
             }
             else{
-                System.out.printf("%.4f and %.4f are not the roots of equation %.4fx^2 + %.4fx + %.4f = 0", x1, x2, a, b, c);
+                System.out.printf("%.4f and %.4f are not the roots of equation %.4fx^2 + %.4fx + %.4f = 0\n", x1, x2, a, b, c);
                 System.out.println("The equation has two real roots.");
                 System.out.println("The equation has two roots: " + ans1 + " and " + ans2);
             }
