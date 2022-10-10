@@ -42,7 +42,7 @@ public class cal_RN{
         System.out.println("\n----------------------------------------------\n");
 
         // System.out.print("Print by method of cal_RN.java: \n");
-        print_Rational(a, b, c, d, e);
+        // print_Rational(a, b, c, d, e);
         
         // System.out.print("Print by method of class of RationalNumber: \n");
         // System.out.print("a = "); a.printRational();
@@ -50,7 +50,7 @@ public class cal_RN{
         // System.out.print("c = "); c.printRational();
         // System.out.print("d = "); d.printRational();
 
-        System.out.println("\n----------------------------------------------\n");
+        // System.out.println("\n----------------------------------------------\n");
 
         // System.out.print("a + b = "); a.add(b);
         // System.out.print("c - d = "); c.subtract(d);
