@@ -8,15 +8,15 @@ public class _1004_QuadraticEquation_cal{
 
         if(_sqrt < 0){
             _sqrt = Math.sqrt(Math.abs(_sqrt));
-            System.out.printf("The equation of %.2fx^2 + %.2fx + %.2f has two complex roots: %.2f + %.2fi and %.2f - %.2fi\n", a, b, c, minB/(twoA), _sqrt/(twoA), minB/(twoA), _sqrt/(twoA));
+            System.out.printf("The equation of %.4fx^2 + %.4fx + %.4f has two complex roots: %.4f + %.4fi and %.4f - %.4fi\n", a, b, c, minB/(twoA), _sqrt/(twoA), minB/(twoA), _sqrt/(twoA));
             
         }
         else if(_sqrt == 0){
-            System.out.printf("The equation of %.2fx^2 + %.2fx + %.2f has one root: %.2f\n", a, b, c, minB/(twoA));
+            System.out.printf("The equation of %.4fx^2 + %.4fx + %.4f has one root: %.4f\n", a, b, c, minB/(twoA));
         }
         else{
             _sqrt = Math.sqrt(_sqrt);
-            System.out.printf("The equation of %.2fx^2 + %.2fx + %.2f has two real roots: %.2f and %.2f\n", a, b, c, (minB+_sqrt)/(twoA), (minB-_sqrt)/(twoA));
+            System.out.printf("The equation of %.4fx^2 + %.4fx + %.4f has two real roots: %.4f and %.4f\n", a, b, c, (minB+_sqrt)/(twoA), (minB-_sqrt)/(twoA));
         }
     }
 
