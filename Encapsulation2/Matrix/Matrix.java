@@ -80,7 +80,7 @@ public class Matrix{
     public void print(){
         for(int i = 0; i < this.row; i++){
             for(int j = 0; j < this.col; j++){
-                System.out.print(this.matrix[i][j] + " ");
+                System.out.printf("%6d ", this.matrix[i][j]);
             }
             System.out.println();
         }
