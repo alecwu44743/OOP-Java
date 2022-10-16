@@ -11,7 +11,7 @@ class HW2APP_D1009331{
         int c, d;
         Scanner sc = new Scanner(System.in);
 
-        System.out.print(" Enter the first complex number a + bi = ");
+        System.out.print("Enter the first complex number a + bi = ");
         a = sc.nextInt();
         b = sc.nextInt();
 
@@ -50,7 +50,11 @@ class HW2APP_D1009331{
         res = first.divide(second);
         System.out.print("Complex division: "); res.printOpeRes(); System.out.println();
 
-        double abs = first.Absolute();
-        System.out.printf("Absolute value of the first complex number: %.2f\n", abs);
+        double abs1 = first.Absolute();
+        System.out.printf("Absolute value of the first complex number: %.2f\n", abs1);
+        System.out.println();
+
+        double abs2 = second.Absolute();
+        System.out.printf("Absolute value of the second complex number: %.2f\n", abs2);
     }
 }
