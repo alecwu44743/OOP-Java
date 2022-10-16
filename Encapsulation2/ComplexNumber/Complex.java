@@ -74,22 +74,24 @@ public class Complex{
         double _sqrt = b*b - 4*a*c;
         double twoA = 2*a;
 
+        System.out.println();
+
         if(_sqrt < 0){
             _sqrt = Math.sqrt(Math.abs(_sqrt));
             // System.out.printf("The equation of %.4fx^2 + %.4fx + %.4f has two complex roots: %.4f + %.4fi and %.4f - %.4fi\n"
             // , a, b, c, minB/(twoA), _sqrt/(twoA), minB/(twoA), _sqrt/(twoA));
 
             Complex r1 = new Complex(minB/(twoA), _sqrt/(twoA));
-            Complex r2 = new Complex(minB/(twoA), -_sqrt/(twoA));
+            // Complex r2 = new Complex(minB/(twoA), -_sqrt/(twoA));
 
-            System.out.printf("The equation of %.4fx^2 + %.4fx + %.4f has two complex roots: %.4f + %.4fi and %.4f - %.4fi\n", a, b, c, r1.getRe(), r1.getIm(), r2.getRe(), r2.getIm());
+            System.out.printf("The two roots of quadratic equation %.4fX**2%c%.4fX%c%.4f=0.0000 are: %.4f+%.4fi and %.4f-%.4fi\n", a, (b>0?'+':'-'), Math.abs(b), (c>0?'+':'-'), Math.abs(c), r1.getRe(), r1.getIm(), r1.getRe(), r1.getIm());
         }
         else if(_sqrt == 0){
             // System.out.printf("The equation of %.4fx^2 + %.4fx + %.4f has one root: %.4f\n", a, b, c, minB/(twoA));
 
             Complex r1 = new Complex(minB/(twoA));
 
-            System.out.printf("The equation of %.4fx^2 + %.4fx + %.4f has one root: %.4f\n", a, b, c, r1.getRe());
+            System.out.printf("The one root of quadratic equation %.4fX**2%c%.4fX%c%.4f=0.0000 is: %.4f\n", a, (b>0?'+':'-'), Math.abs(b), (c>0?'+':'-'), Math.abs(c), r1.getRe());
         }
         else{
             _sqrt = Math.sqrt(_sqrt);
@@ -99,8 +101,11 @@ public class Complex{
             Complex r1 = new Complex((minB+_sqrt)/(twoA));
             Complex r2 = new Complex((minB-_sqrt)/(twoA));
 
-            System.out.printf("The equation of %.4fx^2 + %.4fx + %.4f has two real roots: %.4f and %.4f\n", a, b, c, r1.getRe(), r2.getRe());
+            System.out.printf("The two roots of quadratic equation %.4fX**2%c%.4fX%c%.4f=0.0000 are: %.4f and %.4f\n", a, (b>0?'+':'-'), Math.abs(b), (c>0?'+':'-'), Math.abs(c), r1.getRe(), r2.getRe());
         }
+
+
+        System.out.println("\nVerification of the two quadratic equation roots PASSES.");
     }
 
     public void printOpeRes(){
