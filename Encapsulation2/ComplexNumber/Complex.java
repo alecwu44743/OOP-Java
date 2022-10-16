@@ -4,12 +4,12 @@ public class Complex{
     private double r;
     private double s;
 
-    public Complex(int r, int s){
+    public Complex(double r, double s){
         setRe(r);
         setIm(s);
     }
 
-    public Complex(int r){
+    public Complex(double r){
         setRe(r);
     }
 
@@ -67,6 +67,40 @@ public class Complex{
         ans = Math.sqrt(this.getRe() * this.getRe() + this.getIm() * this.getIm());
 
         return ans;
+    }
+
+    public static void equation_root(double a, double b, double c){
+        double minB = -b;
+        double _sqrt = b*b - 4*a*c;
+        double twoA = 2*a;
+
+        if(_sqrt < 0){
+            _sqrt = Math.sqrt(Math.abs(_sqrt));
+            // System.out.printf("The equation of %.4fx^2 + %.4fx + %.4f has two complex roots: %.4f + %.4fi and %.4f - %.4fi\n"
+            // , a, b, c, minB/(twoA), _sqrt/(twoA), minB/(twoA), _sqrt/(twoA));
+
+            Complex r1 = new Complex(minB/(twoA), _sqrt/(twoA));
+            Complex r2 = new Complex(minB/(twoA), -_sqrt/(twoA));
+
+            System.out.printf("The equation of %.4fx^2 + %.4fx + %.4f has two complex roots: %.4f + %.4fi and %.4f - %.4fi\n", a, b, c, r1.getRe(), r1.getIm(), r2.getRe(), r2.getIm());
+        }
+        else if(_sqrt == 0){
+            // System.out.printf("The equation of %.4fx^2 + %.4fx + %.4f has one root: %.4f\n", a, b, c, minB/(twoA));
+
+            Complex r1 = new Complex(minB/(twoA));
+
+            System.out.printf("The equation of %.4fx^2 + %.4fx + %.4f has one root: %.4f\n", a, b, c, r1.getRe());
+        }
+        else{
+            _sqrt = Math.sqrt(_sqrt);
+            // System.out.printf("The equation of %.4fx^2 + %.4fx + %.4f has two real roots: %.4f and %.4f\n"
+            // , a, b, c, (minB+_sqrt)/(twoA), (minB-_sqrt)/(twoA));
+
+            Complex r1 = new Complex((minB+_sqrt)/(twoA));
+            Complex r2 = new Complex((minB-_sqrt)/(twoA));
+
+            System.out.printf("The equation of %.4fx^2 + %.4fx + %.4f has two real roots: %.4f and %.4f\n", a, b, c, r1.getRe(), r2.getRe());
+        }
     }
 
     public void printOpeRes(){

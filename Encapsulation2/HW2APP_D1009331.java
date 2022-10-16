@@ -7,8 +7,8 @@ class HW2APP_D1009331{
         Complex first = new Complex();
         Complex second = new Complex();
 
-        int a, b;
-        int c, d;
+        double a, b;
+        double c, d;
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter the first complex number a + bi = ");
