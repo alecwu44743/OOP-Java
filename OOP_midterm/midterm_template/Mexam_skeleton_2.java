@@ -118,7 +118,7 @@ public class Mexam_skeleton_2 {
 		// C = A*B
 		for(int i=0; i<n; i++) {
 			for(int j=0; j<n; j++) {
-				for(int k=max(0, j-sb); k<=min(n-1, j+sa); k++) {
+				for(int k=max(0, max(i-ra, j-sb)); k<=min(n-1, min(i+sa, j+rb)); k++) {
 					C[i][j] += A[i][k] * B[k][j];
 				}
 			}
