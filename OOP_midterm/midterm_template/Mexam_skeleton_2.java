@@ -86,7 +86,7 @@ public class Mexam_skeleton_2 {
 	// ra+rb: the lower bandwidth of matrix C, 
 	// sa+sb: the upper bandwidth of matrix C. 
 	// Compute C=AxB using banded matrix multiplication algorithm.
-	private static void matrix_product_banded(int[][] A, int[][] B, int[][] C, int n, int ra, int rb, int sa, int sb) {
+	private static void matrix_product_banded(int[][] A, int[][] B, int[][] C, int n, int ra, int sa, int rb, int sb) {
 		// ***** Complete this function.
 		Random random = new Random();
 		// int number = random.nextInt(max - min) + min;
@@ -96,7 +96,7 @@ public class Mexam_skeleton_2 {
 		// set A, B random values
 		for(int i=0; i<n; i++) {
 			for(int j=0; j<n; j++) {
-				if(i-j <= ra && i-j >= -rb) {
+				if(i-j <= ra && i-j >= -sa) {
 					int r = 0;
 					while(r == 0){
 						r = random.nextInt(50 - (-50)) + (-50);
@@ -104,7 +104,7 @@ public class Mexam_skeleton_2 {
 
 					A[i][j] = r;
 				}
-				if(i-j <= sa && i-j >= -sb) {
+				if(i-j <= rb && i-j >= -sb) {
 					int r = 0;
 					while(r == 0){
 						r = random.nextInt(50 - (-50)) + (-50);
