@@ -30,6 +30,8 @@ public class Mexam_skeleton_4APP {
 		}
 		
 		// TODO: Add some code here for output the result
+		System.out.println("Rank  Serial No.   Name         Swimming         Biking         Running         Total Time");
+		System.out.println("============================================================================================");
 		for(int i = 0; i < scoreArray.length; i++) {
 			System.out.printf("%d\t%d\t%s\t%s\t%s\t%s\t%s", scoreArray[i].ranked, scoreArray[i].SerialNumber, scoreArray[i].Name, scoreArray[i].swimingScore, scoreArray[i].bikingScore, scoreArray[i].runningScore, scoreArray[i].totalScoreStr);
 			System.out.println();

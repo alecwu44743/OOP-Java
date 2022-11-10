@@ -20,8 +20,8 @@ public class Mexam_skeleton_3APP {
 			exp1HexInteger = exp1HexInteger.add(bi[i]);
 		}
 
-		System.out.println("exp1Integer = " + exp1Integer);
-		System.out.println("exp1HexInteger = " + exp1HexInteger);
+		// System.out.println("exp1Integer = " + exp1Integer);
+		// System.out.println("exp1HexInteger = " + exp1HexInteger);
 		
 		//TODO: Add some code here for expression b-c+d+e-f+a & output the restult
 		BigInteger exp2Integer = new BigInteger("0");		  
@@ -29,8 +29,25 @@ public class Mexam_skeleton_3APP {
 		exp2Integer = exp2Integer.add(bi[1]).subtract(bi[2]).add(bi[3]).add(bi[4]).subtract(bi[5]).add(bi[0]);
 		exp2HexInteger = exp2HexInteger.add(bi[1]).subtract(bi[2]).add(bi[3]).add(bi[4]).subtract(bi[5]).add(bi[0]);
 
+		System.out.println("The testing data as follows:");
+		System.out.println("================================");
+		System.out.println("a = 121 (BigInteger)");
+		System.out.println("b = FF (BigHexInteger)");
+		System.out.println("c = -28 (BigInteger)");
+		System.out.println("d = -1C (BigHexInteger)");
+		System.out.println("e = 83 (BigInteger)");
+		System.out.println("f = 2B (BigHexInteger)");
 
-		System.out.println("exp2Integer = " + exp2Integer.toString(10));
-		System.out.println("exp2HexInteger = " + exp2HexInteger);
+		System.out.println();
+
+
+		System.out.println("The output data as follows:");
+		System.out.println("================================");
+
+		// print a+b+c+d+e+f = 446(BigInteger) 1BE(BigHexInteger)
+		System.out.println("a+b+c+d+e+f = " + exp1Integer.toString(10).toUpperCase() + "(BigInteger) " + exp1HexInteger.toString().toUpperCase() + "(BigHexInteger)");
+
+		// print b-c+d+e-f+a = 446(BigInteger) 1BE(BigHexInteger)
+		System.out.println("b-c+d+e-f+a = " + exp2Integer.toString(10).toUpperCase() + "(BigInteger) " + exp2HexInteger.toString().toUpperCase() + "(BigHexInteger)");
 	}
 }

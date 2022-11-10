@@ -117,6 +117,12 @@ public class Mexam_skeleton_1 {
 			}
 		}
 
+		boolean rowValid = false;
+		boolean colValid = false;
+		boolean diagValid = false;
+		boolean antiDiagValid = false;
+
+
 		// Verify all columns.	
 		for (j=0; j<n; j++) { // For each column.
 			sum = 0; // Reset sum to 0.
@@ -125,9 +131,23 @@ public class Mexam_skeleton_1 {
 			}
 			if (sum != total) { // If sum is not equal to total, the magic square is invalid.
 				System.out.printf("The magic square is invalid: sum of column %d is %d, not %d.\n", j, sum, total);
-				return; // Exit the program.
+				// return; // Exit the program.
 			}
 		}
+		colValid = true;
+
+		// Verify all rows.
+		for (i=0; i<n; i++) { // For each row.
+			sum = 0; // Reset sum to 0.
+			for (j=0; j<n; j++) { // For each column.
+				sum += square[i][j]; // Add the value of the cell to sum.
+			}
+			if (sum != total) { // If sum is not equal to total, the magic square is invalid.
+				System.out.printf("The magic square is invalid: sum of row %d is %d, not %d.\n", i, sum, total);
+				// return; // Exit the program.
+			}
+		}
+		rowValid = true;
 
 		// Verify diagonals. 
 		sum = 0; // Reset sum to 0.
@@ -136,7 +156,10 @@ public class Mexam_skeleton_1 {
 		}
 		if (sum != total) { // If sum is not equal to total, the magic square is invalid.
 			System.out.printf("The magic square is invalid: sum of diagonal is %d, not %d.\n", sum, total);
-			return; // Exit the program.
+			// return; // Exit the program.
+		}
+		else{
+			diagValid = true;
 		}
 
 		// Verify anti-diagonals.	
@@ -146,14 +169,46 @@ public class Mexam_skeleton_1 {
 		}
 		if (sum != total) { // If sum is not equal to total, the magic square is invalid.
 			System.out.printf("The magic square is invalid: sum of anti-diagonal is %d, not %d.\n", sum, total);
-			return; // Exit the program.
+			// return; // Exit the program.
+		}
+		else{
+			antiDiagValid = true;
 		}
 
 		// If all verification pass.
-		System.out.println("\nThe magic square passes verification.");
-		System.out.printf("The sum of each row and each column is %d.\n", total);
-		System.out.printf("The sum of at least one diaginal is %d.\n", total);
-		System.out.printf("The sum of at least one anti-diaginal is %d.\n", total);
+		// System.out.println("\nThe magic square passes verification.");
+		// System.out.printf("The sum of each row and each column is %d.\n", total);
+		// System.out.printf("The sum of at least one diaginal is %d.\n", total);
+		// System.out.printf("The sum of at least one anti-diaginal is %d.\n", total);
+
+		if(rowValid && colValid && diagValid && antiDiagValid) {
+			System.out.println("\nThe magic square passes verification.");
+		}
+		else {
+			System.out.println("\nThe magic square does not pass verification.");
+		}
+
+		if(rowValid && colValid) {
+			System.out.printf("The sum of each row and each column is %d.\n", total);
+		}
+		else {
+			if(rowValid) {
+				System.out.printf("The sum of each row is %d.\n", total);
+				// System.out.printf("The sum of each column is not %d.\n", total);
+			}
+			else{
+				// System.out.printf("The sum of each row is not %d.\n", total);
+				System.out.printf("The sum of each column is %d.\n", total);
+			}
+		}
+
+		if(diagValid) {
+			System.out.printf("The sum of at least one diaginal is %d.\n", total);
+		}
+
+		if(antiDiagValid) {
+			System.out.printf("The sum of at least one anti-diaginal is %d.\n", total);
+		}
 		
 		in.close();
 	}
